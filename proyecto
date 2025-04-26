@@ -1,0 +1,33 @@
+Algoritmo califiacion
+	Escribir 'Ingrese el nombre del estudiante:'
+	Leer nombre
+	Escribir 'Ingrese la edad del estudiante:'
+	Leer edad
+	Escribir 'Ingrese el número de identificación del estudiante:'
+	Leer identificacion
+	// Solicitar número de materias
+	Escribir 'Ingrese el número de materias:'
+	Leer n
+	sumaNotasPonderadas <- 0
+	sumaPesos <- 0
+	// Repetir por cada materia
+	Para i<-1 Hasta n Hacer
+		Escribir 'Ingrese la nota de la materia ', i, ':'
+		Leer nota
+		Escribir 'Ingrese el peso (ponderación) de la materia ', i, ':'
+		Leer peso
+		sumaNotasPonderadas <- sumaNotasPonderadas+(nota*peso)
+		sumaPesos <- sumaPesos+peso
+	FinPara
+	// Calcular promedio ponderado
+	Si sumaPesos<>0 Entonces
+		promedioPonderado <- sumaNotasPonderadas/sumaPesos
+	SiNo
+		promedioPonderado <- 0
+	FinSi
+	// Mostrar resultados
+	Escribir 'Nombre del estudiante: ', nombre
+	Escribir 'Edad: ', edad
+	Escribir 'ID: ', identificacion
+	Escribir 'Nota final (promedio ponderado): ', promedioPonderado
+FinAlgoritmo
